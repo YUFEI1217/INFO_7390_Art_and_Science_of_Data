@@ -244,6 +244,12 @@ Feature selection is an important aspect of building a machine learning model. D
   *	Multicollinearity Tests: The variance inflation factor (VIF) can be used to detect multicollinearity between features.
   *	Pair Plots: Scatter plot matrices can show pairwise relationships between numerical features.
   *	Cross-tabulation: For categorical features, cross-tabulation can help understand the relationship between different categories.
+
+  **Example for the relation between the frature**
+    * We can scatter plot matrix of each feature and see the result:
+    ![Scatter_Matrix](https://github.com/nikbearbrown/INFO_7390_Art_and_Science_of_Data/Data_Visualization/IMG/Feature_Relationship_scatter.png)
+    * From this graph, we can see there is a strong correlation between the petal length and petal width. But for the other variables only have weak correlation. So, in this problem, we only need to focus on petal length and petal width.
+
       
 * Dependencies between the features
   *	Conditional Independence Tests: These tests can check if one variable is independent of another, given a third variable.
