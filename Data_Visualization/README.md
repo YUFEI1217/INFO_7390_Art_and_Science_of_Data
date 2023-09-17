@@ -28,6 +28,13 @@ Check the data! GIGO (Garbage-in, garbage-out):  It's crucial to ensure data qua
     * K Nearest Neighbour : The objective is to find K nearest examples in the data where the value in the relevant feature is not absent and then substitute the value of the feature that occurs most frequently in the group.
     * Missing Value Prediction : Using a machine learning module to determine the final imputation value for charactersitic based on other features. The model is trained using the values in the remaining columns, and the rows in feature without missing values.
     * Most Frequent Value : In this method the most frequent column is used to replace the missing values.
+    
+Challenges in Data Imputation Techniques :Missing Data Mechanism: Understanding the missing data mechanism is crucial. Is the data missing completely at random (MCAR), missing at random (MAR), or not missing at random (NMAR)? The mechanism can affect the choice of imputation method.
+* Bias: Imputing missing values can introduce bias if not done carefully. The imputed values should resemble the true underlying distribution as closely as possible to avoid distorting the data.
+* Imputation Quality Assessment: It's important to assess the quality of imputed values. Some metrics, like root mean squared error (RMSE) or mean absolute error (MAE), can be used to evaluate imputation performance.
+* Handling Categorical Data: Imputing categorical data can be tricky. Techniques like using the mode or more advanced approaches like random forest imputation can be employed.
+* Time-Series Data: For time-series data, imputation methods need to account for temporal dependencies. Techniques like forward fill, backward fill, or interpolation with consideration of time can be useful.
+* Data Scale: Scaling issues can arise in imputation. For example, imputing missing values for variables with different scales (e.g., age and salary) may require normalization or standardization. 
 * Data types : Understanding the nature of your data is pivotal.
   - There are several reasons why understanding the nature of data is important as its the first step in any data analysis-
     1. Data Cleaning: Data in the real world is often messy and inconsistent. Understanding your data can help you identify errors or anomalies that need to be addressed before analysis. ex- if certain columns need to contain a specifc data type such as Int but you see some string values, this would indicate a problem.
@@ -286,11 +293,53 @@ Scale, normalize and transform
     * Whenever a measurement variable does nit fit a normal distribution or has great different standard deviations in different groups it is better to perform a data tranformation.
     * Transforming variables can be done to correct outliers and assumption failures.
 
-Graphical components
-* X-position  
-* Y - position  
-* Color  
-* Marks - Shape (Points, Bars,Lines, Areas, Volumes)  
+Graphical components ---> Graphical components and diverse aspects are used in Data Visualisation to effectively represent and convey information.
+These graphical components are the foundation of data visualization, and how they are used can have a big impact on the effectiveness of the visualizations.
+The graphical components used are determined by the type of data, the message that is to be conveyed, and the sort of visualization that is being generated (for example, bar charts, scatter plots, line charts, and so on).
+
+* X-position: The horizontal positioning of data points along a scale or axis is represented by an X-position. It usually refers to the dataset's independent variable or categories. The X-position is critical for organizing data along a similar scale, which allows readers to compare and analyze numbers within categories or across time
+  * Example:
+    * In a bar chart, the X-positions represent different categories or groups.
+    * In a line chart, the X-axis usually represents time or continuous variables.
+ 
+* Y - position: The vertical positioning of data points along a scale or axis is represented by the Y-position. It is usually associated with the dependent variable or data values.
+ The Y-position helps viewers grasp relationships and changes by displaying the size or value of data points.
+    * Example :
+      * In a bar chart, the Y-positions represent the heights or values of bars.
+      * In a scatter plot, the Y-coordinates show the relationship between two variables.
+
+Best practices for data visualization include:
+* Reproducibility:
+  * Documentation: Maintaining clear and well-documented code and scripts for creating visualizations. This includes comments, version control, and descriptions of data sources.
+  * Parameters: Recording the parameters and settings used in visualization tools or libraries to ensure that others can replicate your results.
+  * Data Provenance: Keeping track of the source, preprocessing steps, and any transformations applied to the data before visualization.
+* Interactivity:
+  * User-Centric Design: When creating interactive visualizations, consider the end-user's perspective. Ensure that the interactive elements provide meaningful insights and allow users to explore the data intuitively.
+  * Clear Instructions: Include clear instructions or tooltips to guide users on how to interact with the visualization effectively.
+  * Responsiveness: Ensure that interactive visualizations are responsive and work smoothly across various devices and screen sizes.
+* Annotation:
+  * Labels and Titles: Using informative labels for axes, data points, and legends. Titles and subtitles can provide context and help viewers understand the visualization's purpose.
+  * Legends: Including a legend if your visualization uses color or symbols to represent categories or variables.
+  * Annotations: Adding textual or graphical annotations to highlight specific data points or interesting observations in the visualization.
+* Simplicity:
+  * Minimizing Clutter: Avoiding clutter and excessive detail in visualizations and simplifying complex data when necessary to highlight key insights.
+  * Data-Ink Ratio: Aiming for a high data-ink ratio by removing non-essential elements, such as excessive gridlines or background decorations.
+  * Chart Selection: Choosing visualization types that best represent the data and the insights we want to convey. Sometimes, a simple bar chart or line chart is more effective than complex visualizations.   
+   
+* Color: Color is used to differentiate and categorize data points or groupings depending on a certain property or variable.
+Color provides a visual encoding that helps distinguish and highlight data points or patterns. It can be used for categorical or qualitative data.
+    * Example :
+      * In a pie chart, each segment is often colored differently to represent different categories.
+      * Heatmaps use color gradients to display variations in data intensity. 
+
+* Marks - Shape (Points, Bars,Lines, Areas, Volumes): Marks or shapes are graphical representations of individual data points or data groups.
+Marks are used to display data visually. Shapes can transmit distinct meanings or categories, and they are particularly helpful for encoding categorical data.
+    * Example:
+      * Scatter plots use points as marks to display individual data points.
+      * Bar charts use bars as marks to represent discrete data categories.
+      * An area chart uses filled areas to represent cumulative data over time or across categories
+      * A 3D bar chart uses volumetric bars to represent data values in three dimensions.
+
 * Channels (Position, Size, Angle/Slope, Color/Intensity/Hue,Texture)
 * Animation    
 * Faceting (small multiples) 
