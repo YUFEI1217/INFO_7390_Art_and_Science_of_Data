@@ -247,7 +247,7 @@ Feature selection is an important aspect of building a machine learning model. D
 
   **Example for the relation between the frature**
     * We can scatter plot matrix of each feature and see the result:
-    ![Scatter_Matrix](https://github.com/nikbearbrown/INFO_7390_Art_and_Science_of_Data/Data_Visualization/IMG/Feature_Relationship_scatter.png)
+    ![Scatter_Matrix](../Data_Visualization/IMG/Feature_Relationship_scatter.png)
     * From this graph, we can see there is a strong correlation between the petal length and petal width. But for the other variables only have weak correlation. So, in this problem, we only need to focus on petal length and petal width.
 
       
